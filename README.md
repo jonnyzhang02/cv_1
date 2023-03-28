@@ -47,7 +47,7 @@ cv2.imwrite(Save_Path + "canny_result_mine.jpg", edges)         #生成检测边
 
 运行效果：
 
-<img src="C:\Users\zhangyang\AppData\Roaming\Typora\typora-user-images\image-20230328090452283.png" alt="image-20230328090452283" style="zoom:50%;" />
+<img src="/result/canny_result_mine.jpg"/>
 
 ## 第三步：检测圆`Hough`
 
@@ -88,9 +88,7 @@ if len(circles):                                         #如果检测到圆
 
 运行效果：
 
-<img src="C:\Users\zhangyang\AppData\Roaming\Typora\typora-user-images\image-20230328090525940.png" alt="image-20230328090525940" style="zoom:50%;" />
-
-<img src="C:\Users\zhangyang\AppData\Roaming\Typora\typora-user-images\image-20230328090733094.png" alt="image-20230328090733094" style="zoom:50%;" />
+<img src="/result/hough_result_mine.jpg"/>
 
 ## 第五步：与`cv2`自带的`canny`检测边缘和`hough`检测圆对比
 
