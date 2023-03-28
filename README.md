@@ -1,7 +1,5 @@
 # cv作业1
 
-**2020212185张扬**
-
 [TOC]
 
 ## 第一步：读取图像并缩小图像
@@ -43,7 +41,7 @@ cv2.imwrite(Save_Path + "canny_result_mine.jpg", edges)         #生成检测边
 4. **双阈值**筛选`cm.threshold()`
 5. 连接**弱边缘**`cm.hysteresis()`
 
-自写的`canny`注释较为详细，可以移步[canny_mine.py](/canny_mine.py)查看.
+自写的`canny`注释较为详细，可以移步[canny_mine.py](https://github.com/jonnyzhang02/cv_1/blob/master/canny_mine.py)查看.
 
 运行效果：
 
@@ -88,7 +86,9 @@ if len(circles):                                         #如果检测到圆
 
 运行效果：
 
-<img src="/result/hough_result_mine.jpg"/>
+<img src="./screen_shoot.png" alt="screen_shoot"  />
+
+<img src="/result/hough_result_mine.jpg"  />
 
 ## 第五步：与`cv2`自带的`canny`检测边缘和`hough`检测圆对比
 
@@ -116,3 +116,5 @@ if use_cv2:
 ```
 
 仍然按照上面所说的四个步骤进行,只不过直接调用`cv2`的**库**,`canny`后存为`"canny_result_cv2.jpg"`,检测圆后存为`"hough_result_cv2.jpg"`,同时**打印圆心和半径**.
+
+项目已`push`到**Github**[jonnyzhang02/cv_1 (github.com)](https://github.com/jonnyzhang02/cv_1)

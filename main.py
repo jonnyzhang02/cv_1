@@ -2,7 +2,7 @@
 Author: jonnyzhang02 71881972+jonnyzhang02@users.noreply.github.com
 Date: 2023-03-25 20:37:44
 LastEditors: jonnyzhang02 71881972+jonnyzhang02@users.noreply.github.com
-LastEditTime: 2023-03-28 09:14:21
+LastEditTime: 2023-03-28 09:52:41
 FilePath: \cv_1\main.py
 Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 '''
@@ -11,7 +11,6 @@ import math
 import numpy as np
 import canny_mine as cm
 import hough_mine as hm
-import hough_circle_mine as hcm
 #设置参数
 Path = "pic.jpg"                                            #图像路径
 Save_Path = "result/"                                       #处理后图像保存路径
@@ -42,12 +41,12 @@ edges_cv2 = cv2.Canny(img_gray, 120, 180)
 """
 第三步：检测圆
 """
-Hough = hm.Hough_transform(edges_cv2, canny.angle, step=5, threshold=25)          #自写的hough实例化
-circles = Hough.Calculate()           
+# Hough = hm.Hough_transform(edges_cv2, canny.angle, step=5, threshold=25)          #自写的hough实例化
+# circles = Hough.Calculate()           
 
-# circles=cv2.HoughCircles(edges, cv2.HOUGH_GRADIENT, 1, 
-#                          y/8, param1= 100,param2= 40,
-#                          minRadius= 50, maxRadius= 150)                                 #检测圆 
+circles=cv2.HoughCircles(edges, cv2.HOUGH_GRADIENT, 1, 
+                         y/8, param1= 100,param2= 40,
+                         minRadius= 50, maxRadius= 150)                                 #检测圆 
 print("circles_mine:")
 
 
