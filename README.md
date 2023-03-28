@@ -116,8 +116,6 @@ if use_cv2:
 ```
 
 仍然按照上面所说的四个步骤进行,只不过直接调用`cv2`的**库**,`canny`后存为`"canny_result_cv2.jpg"`,检测圆后存为`"hough_result_cv2.jpg"`,同时**打印圆心和半径**.
-<<<<<<< HEAD
 
 项目已`push`到**Github**[jonnyzhang02/cv_1 (github.com)](https://github.com/jonnyzhang02/cv_1)
-=======
->>>>>>> 27e8b78557f118562d4761c3350568320cc9fbfc
+
