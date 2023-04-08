@@ -10,6 +10,7 @@ class Hough_transform:
         step: Hough 变换步长大小
         threshold: 筛选单元的阈值
         '''
+        
         self.img = img
         self.angle = angle
         self.y, self.x = img.shape[0:2]  
